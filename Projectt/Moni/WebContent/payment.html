@@ -1,0 +1,308 @@
+<html>
+<head>
+<title>Payment Page</title>
+<script>
+function toggle(select) { 
+  if(select == 'credit'){	 
+	  document. getElementById("image").style.display = "none";
+	  document. getElementById("credit").style.display = "";
+	  document. getElementById("debit").style.display = "none";
+	  document. getElementById("paypal").style.display = "none";
+  }else if(select == 'debit'){	 
+	  document. getElementById("image").style.display = "none";
+	  document. getElementById("credit").style.display = "none";
+	  document. getElementById("debit").style.display = "";
+	  document. getElementById("paypal").style.display = "none";
+  }else if(select == 'paypal'){
+	  document. getElementById("image").style.display = "none";
+	  document. getElementById("credit").style.display = "none";
+	  document. getElementById("debit").style.display = "none";
+	  document. getElementById("paypal").style.display = "";
+  }
+}
+
+function onload(){
+  document. getElementById("image").style.display = "";
+  document. getElementById("credit").style.display = "none";
+  document. getElementById("debit").style.display = "none";
+  document. getElementById("paypal").style.display = "none";
+}
+</script>
+<style>
+body{
+background-color:black;
+}
+td{
+color:white;
+}
+.c{
+	width:100%;
+	height:100%;
+	font-size: 45px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.c:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.c:active {
+    color: #000
+}
+
+.c:active:after {
+    background: transparent;
+}
+
+.c:hover:before {
+    opacity: 1;
+}
+
+.c:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+table{
+height:10px;
+width: 100%;
+}
+
+
+.container {
+  --primary-color: #2b3131;
+    --secondary-color: #ff7300;
+    --complimentary-color: #562239;
+  min-height: 50vh;
+  position: relative;
+  display: flex;
+  background-color: var(--complimentary-color);
+  justify-content: center;
+  align-items: center;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+ position: relative;
+}
+
+p {
+  font-size: 100px;
+  color: var(--primary-color);
+  transform: translateY(-600px);
+  animation: 1.2s slideIn ease-in-out forwards 1s;
+  z-index: 10;
+  opacity: 0;
+  position: relative;
+}
+
+p::before {
+    content: '';
+    width: 0%;
+    height: 76px;
+    background-color: var(--secondary-color);
+    position: absolute;
+    bottom: -25px;
+    animation: 1s underline ease-in-out forwards 2s;
+    mix-blend-mode: screen;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    opacity: 0.2;
+    left: 0;
+    right: 0;
+    background-color: var(--secondary-color);
+    transform: scale(.5);
+    animation: .5s slideIn ease-in-out forwards, 1s skewBg ease-in-out;
+}
+
+@keyframes skewBg {
+  0% {
+    transform: scale(.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes underline {
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes slideIn {
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+th{
+color:white;
+font-size:50px;
+}
+
+
+ul {
+				list-style-type: none;
+				margin: 0;
+				padding: 0;
+				overflow: hidden;
+				background-color: transparent;
+				}
+				li {
+				float: right;
+				}
+				li a {
+				display: block;
+				color: white;
+				text-align: left;
+				padding: 14px 16px;
+				text-decoration: none;
+				}
+				li a:hover {
+				background-color: gray;
+				}
+				
+.bt{
+width:62%;
+height: 25%;
+background-color:#008CBA;
+border-radius: 4px;
+
+}
+.btt{
+width:30%;
+background-color:#008CBA;
+border-radius: 4px;
+
+}
+</style>
+</head>
+<body onload="onload()">
+<ul>
+	<li><a class="active" href="contact.html">CONTACT</a></li>
+	<li><a href="help.html">HELP</a></li>
+	<li><a href="index.html">HOME</a></li>
+	<li><a href="recharge portal.html">BACK</a></li>
+</ul>
+<br>
+<br>
+<br>
+<table cellpadding="5" height="80%" width="50%">
+	<tr>
+		<th colspan="2">Payment Gateway Options</th>
+	</tr>
+	<tr>
+		<td>
+		<button class="c" onclick="toggle('credit')"> Credit Card</button>
+		</td>
+		<td rowspan="3">
+			<div id="image">
+				<table align="center">
+					<tr>
+						<td rowspan="4" >
+							<div class = 'container'>
+							   <p>Select One Option</p>
+							   <div class="overlay"></div>
+							</div>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div id="debit">
+			<form>
+				<table>
+					<tr>
+						<td colspan="3" align="center"><h1>Debit Card</h1></td>
+					</tr>
+					<tr>
+						<td rowspan="4"><img src="images/debit pic.jpg"></td>
+						<td>Name on card <td><input class="text_box"type="number"placeholder="Full name as displayed in card"required /></td></td>
+						<tr><td>Debit card number <td><input class="text_box"type="number"placeholder="Enter card number"required /></td></td></tr>
+						<tr><td>expiration date <td><input class="date"type="number"placeholder="Enter expiration date"required /></td></td></tr>
+						<tr><td>cvv number <td><input class="text_box"type="number"placeholder="Enter cvv number"required /></td></td></tr>
+					</tr>
+					<tr>
+						<td colspan="3" align="center"><button class="btt" type="submit"value="SUBMIT" formaction="end.html">Continue to checkout</button></td>
+					</tr>
+				</table>
+				</form>
+				</div>
+	<div id="credit">
+	<form>
+		<table>
+			<tr>
+				<td colspan="3" align="center"><h1>Credit Card</h1></td>
+			</tr>
+			<tr>
+				<td rowspan="4"><img src="images/credit pic.jpg"></td>
+				<td>Name on card <td><input class="text_box"type="number"placeholder="Full name as displayed in card"required /></td></td>
+				<tr><td>Credit card number <td><input class="text_box"type="number"placeholder="Enter card number"required /></td></td></tr>
+				<tr><td>expiration date <td><input class="date"type="number"placeholder="Enter expiration date"required /></td></td></tr>
+				<tr><td>cvv number <td><input class="text_box"type="number"placeholder="Enter cvv number"required /></td></td></tr>
+			</tr>
+			<tr>
+				<td colspan="3" align="center"><button class="btt" type="submit"value="SUBMIT" formaction="end.html">Continue to checkout</button></td>
+			</tr>
+		</table>
+	</form>
+	</div>
+	<div id="paypal">
+		<form>
+			<table>
+				<tr>
+				<td colspan="3" align="center"><h1>PayPal Login</h1></td>
+				</tr>
+				<tr><td rowspan="3" width="45%"><img src="images/paypal pic.png" width="100%" /></td>
+					<td>Email ID</td><td><input class="text_box"type="text"placeholder="Enter Email ID"required /></td></tr>
+				<tr><td>Password</td><td><input class="text_box"type="text"placeholder="Enter Password"required /></td></tr>
+				<tr><td colspan="2"><button class="bt" type="submit"value="SUBMIT" formaction="paypal.html">Log In</button></td></tr>
+			</table>
+		</form>
+	</div>
+		</td>
+	</tr>
+	<tr>
+		<td><button class="c" onclick="toggle('debit')"> Debit Card</button></td>
+	</tr>
+	<tr>
+		<td><button class="c" onclick="toggle('paypal')"> Paypal</button></td>
+	</tr>
+</table>
+</body>
+</html>

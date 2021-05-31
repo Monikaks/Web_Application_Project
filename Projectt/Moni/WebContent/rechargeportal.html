@@ -1,0 +1,140 @@
+
+<html>
+	<head>
+	<title>Recharge Portal Page</title>
+		<style>
+				body{
+				height:auto; width:auto;
+				background-image:url('images/rec2.png');
+				background-repeat:no-repeat;
+				background-size:cover;
+				border-radius:10px;
+				border-style:ridge;
+				border-color:black;
+				overflow: hidden;
+				background-position: center;
+				font-family:sans-serif;
+				}
+				td{
+				color:black;
+				}
+				h2{
+				color:black;
+				}
+				ul {
+				list-style-type: none;
+				margin: 0;
+				padding: 0;
+				overflow: hidden;
+				background-color: transparent;
+				}
+				li {
+				float: right;
+				}
+				li a {
+				display: block;
+				color: white;
+				text-align: left;
+				padding: 14px 16px;
+				text-decoration: none;
+				}
+				li a:hover {
+				background-color: gray;
+				}
+				
+				
+				.login-box {
+				width: 285px;
+				position: absolute;
+				margin-top: 20%;
+				margin-left: 70%;
+				transform: translate(-50%, -50%);
+				color: rgb(255 34 95);
+				}
+				.textbox {
+					width: 100%;
+					overflow: hidden;
+					font-size: 20px;
+					padding: 8px 0;
+					margin: 8px 0;
+					border-bottom: 1px solid #6f325b;
+					align:right;
+					}
+				  .textbox input {
+					border: none;
+					outline: none;
+					background: none;
+					color: white;
+					font-size: 18px;
+					width: 80%;
+					float: left;
+					margin: 0 10px;
+				}
+				 .btn {
+					width: 100%;
+					background: none;
+					color: black;
+					background-color: #f76d13;
+					padding: 5px;
+					font-size: 18px;
+					font-family:sans-serif;
+					cursor: pointer;
+					margin: 12px 0;
+					border-radius: 3px;
+				  }
+				  .button {
+					position: absolute;
+					top: 65%;
+					left: 50%;
+					background-color:rgb(239, 239, 239);
+					transform: translate(-50%, -50%);
+				  }
+				  .btn {
+					padding: 10px 30px;
+					border: 1px solid white;
+					color: white;
+					text-decoration: none;
+					box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+					  0 6px 20px 0 rgba(0, 0, 0, 0.19);
+				  }
+				  .btn:hover {
+					background-color: white;
+					color: black;
+					border: 1px solid transparent;
+					transition: 1s ease;
+				  }
+		</style>
+	</head>
+	<body>
+		<ul>
+			<li><a class="active" href="contact.html">CONTACT</a></li>
+			<li><a href="help.html">HELP</a></li>
+			<li><a href="index.html">HOME</a></li>
+		</ul>
+		<form>
+			<div class="login-box">
+				<h1>Recharge Portal</h1>
+				Phone number
+				<div class="textbox">
+					<input type="text" placeholder="Enter Phone Number"/>
+				</div>
+				Operator
+				<div class="textbox">
+					<select name="Operator">
+						<option value="Select Operator">Select Operator</option>
+						<option value="Airtel">Airtel</option>
+						<option value="Jio">Jio</option>
+						<option value="Vodofone">Vodofone</option>
+						<option value="Idea">Idea</option>
+					</select>
+					<button type="submit"value="Browse Plans" formaction="plans.html">Browse Plans </button>
+				</div>
+				Amount
+				<div class="textbox">
+					<input type="text" placeholder="Enter Amount" />
+				</div>
+				<button type="submit" class="btn" value="Submit" formaction="payment.html">Proceed to payment </button>
+			</div>
+		</form>
+	</body>
+</html>

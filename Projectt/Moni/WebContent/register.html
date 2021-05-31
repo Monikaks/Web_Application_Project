@@ -1,0 +1,133 @@
+<html>
+	<head>
+	<title>Register Page</title>
+		<style>
+				body{
+				height:auto; width:auto;
+				background-image:url('images/logreg.jpg');
+				background-repeat:no-repeat;
+				background-size:cover;
+				border-radius:10px;
+				border-style:ridge;
+				border-color:black;
+				overflow: hidden;
+				background-position: center;
+				font-family:sans-serif;
+				}
+				td{
+				color:black;
+				}
+				h2{
+				color:black;
+				}
+				ul {
+				list-style-type: none;
+				margin: 0;
+				padding: 0;
+				overflow: hidden;
+				background-color: transparent;
+				}
+				li {
+				float: right;
+				}
+				li a {
+				display: block;
+				color: white;
+				text-align: left;
+				padding: 14px 16px;
+				text-decoration: none;
+				}
+				li a:hover {
+				background-color: gray;
+				}
+				
+				
+				.login-box {
+				width: 285px;
+				position: absolute;
+				margin-top: 20%;
+				margin-left: 70%;
+				transform: translate(-50%, -50%);
+				color: rgb(195 162 155);
+				}
+				.textbox {
+					width: 100%;
+					overflow: hidden;
+					font-size: 20px;
+					padding: 8px 0;
+					margin: 8px 0;
+					border-bottom: 1px solid #6f325b;
+					align:right;
+					}
+				  .textbox input {
+					border: none;
+					outline: none;
+					background: none;
+					color: white;
+					font-size: 18px;
+					width: 80%;
+					float: left;
+					margin: 0 10px;
+				}
+				 .btn {
+					width: 100%;
+					background: none;
+					color: white;
+					background-color: #6f325b;
+					padding: 5px;
+					font-size: 18px;
+					font-family:sans-serif;
+					cursor: pointer;
+					margin: 12px 0;
+					border-radius: 3px;
+				  }
+				  .button {
+					position: absolute;
+					top: 65%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+				  }
+				  .btn {
+					padding: 10px 30px;
+					border: 1px solid white;
+					color: white;
+					text-decoration: none;
+					box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+					  0 6px 20px 0 rgba(0, 0, 0, 0.19);
+				  }
+				  .btn:hover {
+					background-color: white;
+					color: black;
+					border: 1px solid transparent;
+					transition: 1s ease;
+				  }
+		</style>
+	</head>
+	<body>
+		<ul>
+			<li><a class="active" href="contact.html">CONTACT</a></li>
+			<li><a href="help.html">HELP</a></li>
+			<li><a href="index.html">HOME</a></li>
+			<li><a href="login.html">BACK</a></li>
+		</ul>
+		<form action="RegisterServlet" method="post">
+			<div class="login-box">
+				<h1>Sign Up</h1>
+				
+				<div class="textbox">
+					<input type="text" name="username" placeholder="Enter your user name" required />
+				</div>
+				<div class="textbox">
+					<input type="email" name="email" placeholder="Enter your Email" required />
+				</div>
+				<div class="textbox">
+					<input type="text" name="ph_number" placeholder="Enter your phone number" required />
+				</div>
+				<div class="textbox">
+					<input type="password" name="password" placeholder="Enter your password" required />
+				</div>
+				<button type="submit" class="btn" value="Submit">SUBMIT </button>
+			</div>
+		</form>
+	</body>
+</html>

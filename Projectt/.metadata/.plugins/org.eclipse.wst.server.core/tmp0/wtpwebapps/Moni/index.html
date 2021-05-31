@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Main Page</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<style>
+body {
+	background-image: url('images/6.jpg');
+	color: #FFF;
+	height: 100vh;
+	position: relative;
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	-msn-background-size: cover;
+	animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient 
+{ 
+	0% 
+	{
+		background-position: 0% 100%;
+	}
+	25%
+	{
+	background-position: 100% 50%;
+	}
+	50%
+	{
+	background-position: 50% 100%;
+	}
+	100%
+	{
+	background-position: 100% 0%;
+	}
+}
+.content {
+	position: absolute;
+	background: rgb(0, 0, 0); /* Fallback color */
+	background: rgba(0, 0, 0, 0.3); /* Black background with 0.5 opacity */
+	color: white;
+	width: 100%;
+}
+
+h1 {
+	position: relative;
+	font-family: sans-serif;
+	text-transform: uppercase;
+	letter-spacing: 4px;
+	overflow: hidden;
+	background: linear-gradient(90deg, #d453c0, #d21552, #d25c18, #d1d429);
+	background-repeat: no-repeat;
+	background-size: 80%;
+	animation: animate 3s linear infinite;
+	text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
+}
+
+h4 {
+	color: white;
+	text-shadow: 1px 1px 2px black, 0 0 25px green, 0 0 5px pink;
+}
+
+@keyframes animate 
+{ 
+	0% 
+	{
+		background-position: -500%;
+	}
+	100%
+	{
+	background-position:500%;
+	}
+}
+</style>
+</head>
+<body>
+	<div class="bs-example">
+		<nav class="navbar navbar-expand-md navbar-dark">
+			<a href="#" class="navbar-brand"> <img src="images/logo.PNG"
+				height="80px" width="80px" alt="CoolBrand">
+			</a>
+			<button type="button" class="navbar-toggler" data-toggle="collapse"
+				data-target="#myNavbar">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarCollapse">
+				<div class="navbar-nav ml-auto">
+					<h4><a href="login.html" class="nav-item nav-link">Login</a></h4> 
+					<h4><a href="help.html" class="nav-item nav-link">Help</a></h4>
+					<h4><a href="contact.html" class="nav-item nav-link" tabindex="-1">Contact</a></h4>
+				</div>
+			</div>
+		</nav>
+	</div>
+	<div class="content">
+		<h1> Online Mobile Recharge</h1>
+	</div>
+</body>
+</html>

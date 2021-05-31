@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<style>
+td:nth-child(1){
+text-align: right;
+}
+td:nth-child(2){
+text-align: left;
+}
+.place {
+color:grey;
+font-size: 12px;
+}
+td{
+font-size:14px;
+padding-bottom: 10px;
+}
+input[type="submit"] {
+width:130px;
+height:25px;
+cursor: pointer;
+border:none;
+background:black;
+color:white;
+}
+.container {
+ margin-left:30%;
+ padding:20px;
+ width:500px;
+ heigh:800px;
+ border:1px solid skyblue;
+ background-color:skyblue;
+ text-align: center;
+ display:flex;
+ justify-content: center;
+}
+</style>
+</head>
+<body>
+<div class="container">
+<form action="LoginController" method="post">
+<table>
+<tr> <td>Name<div class="place">Add your Name</div></td><td><input
+type="text" name="name" ></tr>
+<tr> <td>Email<div class="place">Enter a Valid Email</div></td><td><input
+type="email" name="email" ></tr>
+<tr> <td>Phone<div class="place">Add a Phone Number</div></td><td><input
+type="text" name="phone" ></tr>
+<tr> <td>Website<div class="place">Your Website</div></td><td><input
+type="text" name="website" ></tr>
+<tr> <td>Priority<div class="place">Priority Level</div></td><td><select
+name="priority"><option value="High">High</option><option
+value="Low">Low</option></select></td></tr>
+<tr> <td>Type<div class="place">Type of contact</div></td><td><select
+name="type"><option value="websiteupdate">Website Update</option></select></td></tr>
+<tr> <td>Message<div class="place">Type Your
+Message</div></td><td><textarea name ="text" ></textarea></td> </tr>
+</table>
+<input type="submit">
+</form>
+</div>
+</body>
+</html>

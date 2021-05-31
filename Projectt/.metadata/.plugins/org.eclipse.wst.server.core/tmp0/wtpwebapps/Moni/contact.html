@@ -1,0 +1,212 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Contact Page</title>
+
+<style>
+body {
+	background-image: url('images/c2.jpg');
+	background-size: cover;
+	background-position: center;
+}
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: transparent;
+}
+
+li {
+	float: right;
+}
+
+li a {
+	display: block;
+	color: white;
+	text-align: left;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+
+li a:hover {
+	background-color: gray;
+}
+
+img {
+	height: 275;
+	width: 275;
+	position: relative;
+	padding: 0;
+}
+
+img:hover {
+	opacity: 0.2;
+}
+
+.img.content {
+	opacity: 1;
+	margin-top: 2%;
+	margin-left: 10%;
+	transition-duration: 0.5s
+}
+
+.image.content:hover {
+	height: 0;
+	transform: translateY(180px);
+	transition-delay: 0s;
+	transition-duration: 1s;
+}
+
+.intro {
+	color: white;
+	font-size: 50px;
+	text-shadow: 2px 2px 5px pink;
+}
+
+.intro:hover {
+	font-size: 50px;
+	color: white;
+	text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue
+}
+
+a:link {
+	color: white;
+}
+
+.content {
+	position: relative;
+	max-width: 275px;
+	margin: auto;
+	overflow: hidden;
+}
+
+.content .content-overlay {
+	background: rgba(0, 0, 0, 0.7);
+	position: absolute;
+	height: 99%;
+	width: 100%;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	opacity: 0;
+	-webkit-transition: all 0.4s ease-in-out 0s;
+	-moz-transition: all 0.4s ease-in-out 0s;
+	transition: all 0.4s ease-in-out 0s;
+}
+
+.content:hover .content-overlay {
+	opacity: 1;
+}
+
+.content-image {
+	width: 100%;
+}
+
+.content-details {
+	position: absolute;
+	text-align: center;
+	padding-left: 1em;
+	padding-right: 1em;
+	width: 100%;
+	top: 50%;
+	left: 50%;
+	opacity: 0;
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	-webkit-transition: all 0.3s ease-in-out 0s;
+	-moz-transition: all 0.3s ease-in-out 0s;
+	transition: all 0.3s ease-in-out 0s;
+}
+
+.content:hover .content-details {
+	top: 50%;
+	left: 50%;
+	opacity: 1;
+}
+
+.content-details p {
+	color: #fff;
+	font-size: 1.8em;
+}
+
+.fadeIn-bottom {
+	top: 80%;
+}
+
+.fadeIn-top {
+	top: 20%;
+}
+
+.fadeIn-left {
+	left: 20%;
+}
+
+.fadeIn-right {
+	left: 80%;
+}
+</style>
+</head>
+<body>
+
+	<ul>
+		<li><a class="active" href="help.html">HELP</a></li>
+		<li><a href="index.html">HOME</a></li>
+	</ul>
+
+
+	<table>
+		<tr>
+			<td colspan="2" align="left">
+				<div class="content">
+					<div class="content-overlay"></div>
+					<img class="content-image" src="images/jenane.jpeg" />
+					<div class="content-details fadeIn-bottom">
+						<p class="content-text">
+							<b>Jenane</b><br>
+							<a href="mailto: 18f218@kce.ac.in"><i>18f218@kce.ac.in</i></a>
+						</p>
+					</div>
+				</div>
+			</td>
+			<td colspace="3" align="center">
+				<div class="intro">
+					<i>Students of IT Department</i><br> <i>Karpagam College
+						Of Engineering</i>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div class="content">
+					<div class="content-overlay"></div>
+					<img class="content-image" src="images/abdulla.jpg" />
+					<div class="content-details fadeIn-bottom">
+						<p class="content-text">
+							<b>Abdulla Khaf</b><br>
+							<a href="mailto: 18f201@kce.ac.in"><i>18f201@kce.ac.in</i></a>
+						</p>
+					</div>
+				</div>
+			</td>
+			<td>
+				<div class="content">
+					<div class="content-overlay"></div>
+					<img class="content-image" src="images/monika.jpg" />
+					<div class="content-details fadeIn-bottom">
+						<p class="content-text">
+							<b>Monika</b><br>
+							<a href="mailto: 18f232@kce.ac.in"><i>18f232@kce.ac.in</i></a>
+						</p>
+					</div>
+				</div>
+			</td>
+		</tr>
+	</table>
+</body>
+</html>
